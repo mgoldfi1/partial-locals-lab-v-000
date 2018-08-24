@@ -18,7 +18,7 @@ class Student < ActiveRecord::Base
 
   def self.search(name)
     if name != ""
-    Student.find_by(name: name)
+    Student.where(name: name)
   else
     Student.all
   end

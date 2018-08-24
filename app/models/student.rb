@@ -20,7 +20,7 @@ class Student < ActiveRecord::Base
     if name == ""
       Student.all
     else
-      Student.where(name: name)
+      Student.where(name.include?(name))
   end
 end
 

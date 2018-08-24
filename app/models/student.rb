@@ -21,9 +21,6 @@ class Student < ActiveRecord::Base
       Student.all
     else
       Student.where(name: name)
-
-  else
-    Student.all
   end
 end
 

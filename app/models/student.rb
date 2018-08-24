@@ -17,9 +17,11 @@ class Student < ActiveRecord::Base
 
 
   def self.search(name)
-    binding.pry
-    if name
-    Student.where(name: name)
+    if name == ""
+      Student.all
+    else
+      Student.where(name: name)
+
   else
     Student.all
   end
